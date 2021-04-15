@@ -7,7 +7,7 @@
     <groupId>com.github.taccisum</groupId>
     <artifactId>unify-payload</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.1</version>
 
     <modules>
         <module>unify-payload-core</module>
