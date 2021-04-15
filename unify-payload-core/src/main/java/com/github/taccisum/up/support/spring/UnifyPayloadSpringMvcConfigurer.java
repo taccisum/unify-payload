@@ -2,6 +2,7 @@ package com.github.taccisum.up.support.spring;
 
 import com.github.taccisum.up.Payload;
 import com.github.taccisum.up.PayloadFormatter;
+import com.github.taccisum.up.utils.ArrayListUtils;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.core.MethodParameter;
 import org.springframework.core.annotation.AnnotationUtils;
@@ -30,14 +31,11 @@ public class UnifyPayloadSpringMvcConfigurer implements InitializingBean {
     @Override
     public void afterPropertiesSet() {
         List<HandlerMethodReturnValueHandler> handlers = new ArrayList<>(adapter.getReturnValueHandlers());
-        for (HandlerMethodReturnValueHandler item : handlers) {
-            int index = handlers.indexOf(item);
-            if (RequestResponseBodyMethodProcessor.class.isAssignableFrom(item.getClass())) {
-                handlers.add(index, new RequestResponseBodyMethodProcessorProxy((RequestResponseBodyMethodProcessor) item));
-                handlers.remove(item);
-                break;
-            }
-        }
+        ArrayListUtils.findFirstAndReplace(
+                handlers,
+                RequestResponseBodyMethodProcessor.class,
+                item -> new RequestResponseBodyMethodProcessorProxy((RequestResponseBodyMethodProcessor) item)
+        );
         adapter.setReturnValueHandlers(handlers);
     }
 
