@@ -18,11 +18,11 @@ import java.util.List;
  * @author liaojinfeng
  * handle & unify format of return value
  */
-public class ReturnValueConfigurer implements InitializingBean {
+public class UnifyPayloadSpringMvcConfigurer implements InitializingBean {
     private RequestMappingHandlerAdapter adapter;
     private PayloadFormatter formatter;
 
-    public ReturnValueConfigurer(RequestMappingHandlerAdapter adapter, PayloadFormatter formatter) {
+    public UnifyPayloadSpringMvcConfigurer(RequestMappingHandlerAdapter adapter, PayloadFormatter formatter) {
         this.adapter = adapter;
         this.formatter = formatter;
     }
@@ -54,7 +54,7 @@ public class ReturnValueConfigurer implements InitializingBean {
                 return false;
             }
 
-            // 是否在方法或类上找到 @Payload
+            // 判断是否在方法或类上找到 @Payload
             if (AnnotationUtils.findAnnotation(methodParameter.getMethod(), Payload.class) != null) {
                 return true;
             } else {
@@ -70,7 +70,11 @@ public class ReturnValueConfigurer implements InitializingBean {
                 ModelAndViewContainer modelAndViewContainer,
                 NativeWebRequest nativeWebRequest)
                 throws Exception {
-            delegate.handleReturnValue(formatter.format(o), methodParameter, modelAndViewContainer, nativeWebRequest);
+            Object target = o;
+            if (formatter != null) {
+                target = formatter.format(o);
+            }
+            delegate.handleReturnValue(target, methodParameter, modelAndViewContainer, nativeWebRequest);
         }
     }
 }
