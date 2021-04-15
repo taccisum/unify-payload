@@ -10,8 +10,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>up-core</module>
-        <module>up-starter</module>
+        <module>unify-payload-core</module>
+        <module>unify-payload-starter</module>
     </modules>
 
     <name>Unify Payload</name>

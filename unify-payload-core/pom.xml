@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>up-core</artifactId>
+    <artifactId>unify-payload-core</artifactId>
 
     <name>Unify Payload Core</name>
 

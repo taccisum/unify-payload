@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>up-starter</artifactId>
+    <artifactId>unify-payload-starter</artifactId>
 
     <name>Unify Payload Starter</name>
 
