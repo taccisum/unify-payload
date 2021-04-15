@@ -10,6 +10,10 @@ import java.util.function.Function;
 public abstract class ArrayListUtils {
     /**
      * 找到第一个匹配的 item 并替换
+     *
+     * @param ls      list
+     * @param matcher 匹配器
+     * @param func    替换函数
      */
     public static <T> void findFirstAndReplace(List<T> ls, Function<T, Boolean> matcher, Function<T, T> func) {
         for (T item : ls) {
@@ -22,6 +26,13 @@ public abstract class ArrayListUtils {
         }
     }
 
+    /**
+     * 找到第一个匹配的类型并替换
+     *
+     * @param ls    list
+     * @param clazz 目标类型
+     * @param func  替换函数
+     */
     public static <T> void findFirstAndReplace(List<T> ls, Class<? extends T> clazz, Function<T, T> func) {
         findFirstAndReplace(
                 ls,

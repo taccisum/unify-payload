@@ -17,7 +17,8 @@ import java.util.List;
 
 /**
  * @author liaojinfeng
- * handle & unify format of return value
+ *
+ * handle and unify format of return value
  */
 public class UnifyPayloadSpringMvcConfigurer implements InitializingBean {
     private RequestMappingHandlerAdapter adapter;
