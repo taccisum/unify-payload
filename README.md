@@ -51,7 +51,7 @@ public class DemoController {
 访问相应 api，可以看到返回格式已经被修改了
 
 ```shell
-$ curl http://localhost:8003/apsara
+$ curl http://localhost:8080/demo
 {"code":"1","data":"hello","success":true}
 ```
 
