@@ -16,7 +16,7 @@
     <dependencies>
         <dependency>
             <groupId>com.github.taccisum</groupId>
-            <artifactId>up-core</artifactId>
+            <artifactId>unify-payload-core</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
