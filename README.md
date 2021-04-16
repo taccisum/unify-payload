@@ -2,6 +2,7 @@
 
 [![Build Status](https://www.travis-ci.com/taccisum/unify-payload.svg?branch=master)](https://www.travis-ci.com/taccisum/unify-payload)
 [![codecov](https://codecov.io/gh/taccisum/unify-payload/branch/main/graph/badge.svg?token=AFRo23WYix)](https://codecov.io/gh/taccisum/unify-payload)
+[![Maven Central](https://img.shields.io/maven-central/v/com.github.taccisum/unify-payload.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.github.taccisum%22%20AND%20a:%22unify-payload%22)
 
 帮助你轻松地将 Api 返回值处理成统一格式。
 
@@ -13,7 +14,7 @@
 <dependency>
     <groupId>com.github.taccisum</groupId>
     <artifactId>unify-payload-starter</artifactId>
-    <version>{latest.version}</version>
+    <version>0.1</version>
 </dependency>
 ```
 
