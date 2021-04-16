@@ -12,6 +12,7 @@
     <modules>
         <module>unify-payload-core</module>
         <module>unify-payload-starter</module>
+        <module>test</module>
     </modules>
 
     <name>Unify Payload</name>
