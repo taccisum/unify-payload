@@ -1,6 +1,7 @@
 # Unify Payload
 
 [![Build Status](https://www.travis-ci.com/taccisum/unify-payload.svg?branch=master)](https://www.travis-ci.com/taccisum/unify-payload)
+[![codecov](https://codecov.io/gh/taccisum/unify-payload/branch/main/graph/badge.svg?token=AFRo23WYix)](https://codecov.io/gh/taccisum/unify-payload)
 
 帮助你轻松地将 Api 返回值处理成统一格式。
 
